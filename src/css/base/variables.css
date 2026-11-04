@@ -1,0 +1,28 @@
+:root {
+  /* Màu */
+  --color-primary: #720706;
+  --color-primary-light: #2c5a3d;
+  --color-accent: #c9a25a;
+  --color-bg: #720706;
+  --color-bg-alt: #f1ece0;
+  --color-text: #f9f4e8;
+  --color-text-muted: #6b6b6b;
+  --color-white: #ffffff;
+
+  /* Font */
+  --font-body: "Be Vietnam Pro", system-ui, sans-serif;
+  --font-heading: "Playfair Display", Georgia, serif;
+
+  /* Spacing */
+  --space-xs: 8px;
+  --space-sm: 18px;
+  --space-md: 24px;
+  --space-lg: 48px;
+  --space-xl: 90px;
+
+  /* Khác */
+  --radius: 12px;
+  --shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  --container-max: 1200px;
+  --transition: 0.3s ease;
+}

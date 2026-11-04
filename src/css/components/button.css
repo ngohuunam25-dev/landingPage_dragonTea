@@ -1,0 +1,23 @@
+.btn {
+  display: inline-block;
+  padding: 14px 32px;
+  border: 2px solid transparent;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: var(--transition);
+}
+.btn--primary {
+  background: var(--color-accent);
+  color: var(--color-primary);
+}
+.btn--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+.btn--outline {
+  border-color: currentColor;
+  background: transparent;
+}
+.btn--outline:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
