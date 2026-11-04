@@ -205,20 +205,6 @@ section {
   margin-right: -50vw;
   object-fit: cover;
 }
-@media (max-width: 640px) {
-  .hero__content {
-    padding: 32px 20px;
-  }
-  .hero__title {
-    font-size: 30px;
-  }
-  .hero__text {
-    font-size: 16px;
-  }
-  .hero__scroll {
-    padding: 16px 20px 32px;
-  }
-}
 
 /* ========== brand-philosophy ========== */
 .section--brand-philosophy {
@@ -1088,45 +1074,6 @@ section {
   opacity: 0.85;
 }
 
-/* ===== Responsive ===== */
-@media (max-width: 1024px) {
-  .footer__grid {
-    grid-template-columns: 1fr;
-  }
-  .footer__col--right {
-    border-left: 0;
-    border-top: 1px solid var(--footer-line);
-  }
-}
-
-@media (max-width: 640px) {
-  .footer__col--info {
-    padding: 40px 20px;
-  }
-  .footer__policies-wrap {
-    flex-direction: column-reverse;
-    padding: 32px 20px;
-  }
-  .footer__newsletter {
-    padding: 28px 20px;
-  }
-  .footer__socials {
-    flex-wrap: wrap;
-    height: auto;
-    padding: 20px;
-    gap: 16px;
-  }
-  .footer__social-icons {
-    font-size: 28px;
-    gap: 20px;
-  }
-  .footer__company-name {
-    font-size: 18px;
-  }
-  .footer__info-list {
-    font-size: 16px;
-  }
-}
 
 /* ========== Grid chung ========== */
 .grid {
@@ -1142,19 +1089,6 @@ section {
 .grid--4 {
   grid-template-columns: repeat(4, 1fr);
 }
-@media (max-width: 992px) {
-  .grid--3,
-  .grid--4 {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 640px) {
-  .grid--2,
-  .grid--3,
-  .grid--4 {
-    grid-template-columns: 1fr;
-  }
-}
 
 /* Layout 2 cột: chữ + ảnh */
 .split {
@@ -1165,14 +1099,6 @@ section {
 }
 .split--reverse > :first-child {
   order: 2;
-}
-@media (max-width: 768px) {
-  .split {
-    grid-template-columns: 1fr;
-  }
-  .split--reverse > :first-child {
-    order: 0;
-  }
 }
 
 /* ========== Card ========== */
@@ -1271,11 +1197,6 @@ section {
 .gallery img:hover {
   transform: scale(1.03);
 }
-@media (max-width: 768px) {
-  .gallery {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
 
 .lightbox {
   position: fixed;
@@ -1340,4 +1261,740 @@ section {
   border-top: 1px solid rgba(255, 255, 255, 0.15);
   text-align: center;
   font-size: 0.9rem;
+}
+
+/* ========== Responsive (Giữ nguyên UI Desktop, giảm kích thước) ========== */
+@media (max-width: 1024px) {
+  /* Hero */
+  .hero,
+  .hero_media > video {
+    height: 520px;
+  }
+  .hero_media > video {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .hero__nav {
+    padding: 20px 20px;
+  }
+  .hero__logo {
+    font-size: 1.5rem;
+  }
+  .hero__center,
+  .hero__global,
+  .hero__menu {
+    font-size: 1rem;
+  }
+  .hero__center {
+    top: 1.5rem;
+  }
+  .hero__center svg {
+    width: 56px;
+    height: 65px;
+  }
+  .hero__name_logo {
+    font-size: 0.5rem;
+    margin-top: -0.6rem;
+  }
+  .hero__content_left {
+    left: 20px;
+    max-width: calc(100% - 140px);
+    padding-bottom: 28px;
+  }
+  .hero__eyebrow {
+    font-size: 11px;
+  }
+  .hero__title {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+  }
+  .hero__text {
+    font-size: 0.78rem;
+  }
+  .hero__scroll {
+    padding: 0 24px 28px 24px;
+    font-size: 0.8rem;
+  }
+  .hero__scroll-stem {
+    height: 55px;
+  }
+
+  /* Brand Philosophy */
+  .section--brand-philosophy {
+    padding: 40px 20px;
+  }
+  .philosophy-header {
+    gap: 20px;
+  }
+  .philosophy-header__left > h2 {
+    font-size: 3rem;
+  }
+  .philosophy-header__right {
+    width: 50%;
+  }
+  .philosophy-header__right > p {
+    font-size: 0.8rem;
+  }
+  .philosophy-categories {
+    gap: 14px;
+  }
+  .category-card {
+    max-height: 220px;
+  }
+  .category-card__title {
+    font-size: 1rem;
+  }
+
+  /* Specialty Tea & Heritage */
+  .section--specialty-tea .specific_tea,
+  .section--heritage .specific_tea {
+    width: 100%;
+    height: 380px;
+    background-size: cover;
+    padding: 0 20px;
+  }
+  .specialty-tea__content {
+    transform: translateY(18%) !important;
+  }
+  .specialty-tea__title {
+    font-size: 2.4rem;
+  }
+  .specialty-tea__subtitle {
+    font-size: 1.05rem;
+  }
+  .specialty-tea__desc {
+    font-size: 0.7rem;
+    max-width: 340px;
+  }
+  .specific_tea .hero__btn_preiview {
+    margin-top: 1.4rem;
+    height: 1.5rem;
+  }
+  .heritage__title {
+    font-size: 2rem;
+  }
+  .section--heritage .specific_tea > section {
+    transform: translateY(45%);
+  }
+  .heritage__desc {
+    font-size: 0.78rem;
+    max-width: 380px;
+  }
+  .section--heritage .hero__btn_preiview {
+    left: calc(100% - 130px);
+    top: 50px;
+  }
+
+  /* Product Comparison (Ferment) */
+  .ferment {
+    min-height: 480px;
+  }
+  .ferment__panel {
+    grid-template-rows: 260px 85px 1fr;
+  }
+  .ferment__content,
+  .ferment__panel--dark .ferment__content {
+    padding: 32px 28px 0 28px;
+  }
+  .ferment__title {
+    font-size: 14px;
+  }
+  .ferment__desc {
+    font-size: 12px;
+  }
+  .ferment__thumbs {
+    gap: 14px;
+    padding: 0 20px;
+  }
+  .ferment__panel--light .ferment__thumbs {
+    padding-right: 120px;
+  }
+  .ferment__panel--dark .ferment__thumbs {
+    padding-left: 120px;
+  }
+  .ferment__thumbs li {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+  }
+  .ferment__cup {
+    --cup-size: 220px;
+    --cup-ring: 10px;
+    top: 145px;
+  }
+
+  /* Youth */
+  .section--youth .youth {
+    width: 100%;
+    height: 480px;
+  }
+  .section--youth .youth section > div {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .youth__content {
+    transform: translateX(36px) translateY(20%);
+    max-width: calc(100% - 72px);
+  }
+  .youth__title {
+    font-size: 1.3rem;
+  }
+  .youth__desc {
+    font-size: 0.7rem;
+    max-width: 520px;
+  }
+
+  /* Concept Research */
+  .section--concept_research {
+    padding: 1.5rem 20px 4rem;
+  }
+  .research__media {
+    flex: 0 0 35%;
+    max-width: 35%;
+  }
+  .research__media > img {
+    width: 100%;
+  }
+  .research__text > p {
+    font-size: 0.78rem;
+  }
+  .research__content .hero__btn_preiview {
+    right: 1.5rem;
+    bottom: -2.6rem;
+  }
+
+  /* Resort Banner */
+  .section--resort .resort__media {
+    width: 100%;
+    height: 520px;
+  }
+  .resort__title {
+    font-size: 2rem;
+  }
+  .resort_banner--right .resort__desc {
+    max-width: 50%;
+  }
+  .resort_banner--left .resort__desc {
+    max-width: 60%;
+  }
+
+  /* Parallax Banner */
+  .news__grid {
+    gap: 14px;
+  }
+  .news-card {
+    max-height: 300px;
+  }
+  .news-card__footer {
+    font-size: 1rem;
+  }
+  .news-card__arrow {
+    font-size: 2rem;
+    right: 1.5rem;
+  }
+
+  /* Footer */
+  .footer__col--info {
+    padding: 20px 16px;
+  }
+  .footer__logo {
+    width: 75px;
+  }
+  .footer__company-name {
+    font-size: 0.95rem;
+    margin-bottom: 16px;
+  }
+  .footer__info-list {
+    font-size: 0.75rem;
+    padding: 0 16px 0 22px;
+  }
+  .footer__info-list li + li {
+    margin-top: 14px;
+  }
+  .footer__policies-wrap {
+    padding: 20px 16px 20px 24px;
+    gap: 16px;
+  }
+  .footer__section-title {
+    font-size: 0.9rem;
+    margin-bottom: 14px;
+  }
+  .footer__policy-list {
+    font-size: 0.65rem;
+    padding-left: 18px;
+  }
+  .footer__badge {
+    width: 110px;
+    flex-shrink: 0;
+  }
+  .footer__newsletter {
+    padding: 20px 24px 24px;
+  }
+  .footer__newsletter-title {
+    font-size: 11px;
+    margin: 0 0 10px 14px;
+  }
+  .footer__form {
+    width: 100%;
+    height: 44px;
+    padding: 0 5px 0 16px;
+  }
+  .footer__form input {
+    font-size: 10px;
+  }
+  .footer__form button {
+    width: 34px;
+    height: 34px;
+    font-size: 14px;
+  }
+  .footer__socials {
+    height: 56px;
+    gap: 16px;
+    padding: 0 14px;
+  }
+  .footer__social-label {
+    font-size: 12px;
+  }
+  .footer__social-icons {
+    font-size: 22px;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  /* Hero */
+  .hero,
+  .hero_media > video {
+    height: 280px;
+  }
+  .hero__nav {
+    padding: 10px 12px;
+  }
+  .hero__left {
+    gap: 8px;
+  }
+  .hero__logo {
+    font-size: 0.95rem;
+  }
+  .hero__global {
+    font-size: 0.65rem;
+  }
+  .hero__global span {
+    font-size: 0.55rem;
+    margin-left: 3px;
+  }
+  .hero__center {
+    top: 0.6rem;
+  }
+  .hero__center svg {
+    width: 32px;
+    height: 38px;
+  }
+  .hero__name_logo {
+    font-size: 0.38rem;
+    margin-top: -0.35rem;
+    line-height: 1.1;
+  }
+  .hero__menu {
+    gap: 8px;
+    font-size: 0.7rem;
+  }
+  .hero__content_left {
+    left: 12px;
+    max-width: calc(100% - 75px);
+    padding-bottom: 12px;
+  }
+  .hero__eyebrow {
+    font-size: 7px;
+  }
+  .hero__title {
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+  }
+  .hero__text {
+    font-size: 0.45rem;
+    line-height: 1.35;
+    margin-bottom: 6px;
+  }
+  .hero__btn_preiview {
+    gap: 0.5rem;
+    padding: 0 0.5rem;
+    font-size: 0.38rem;
+    height: 1.1rem;
+  }
+  .hero__btn_preview_line {
+    margin-right: 0.35rem;
+  }
+  .hero__scroll-stem1 {
+    width: 1.5px;
+    height: 14px;
+  }
+  .hero__scroll {
+    padding: 0 10px 12px 0;
+    font-size: 0.45rem;
+    gap: 4px;
+  }
+  .hero__scroll-dot {
+    width: 5px;
+    height: 5px;
+    border-width: 1px;
+  }
+  .hero__scroll-stem {
+    width: 1.5px;
+    height: 30px;
+  }
+  .hero__scroll-arrow {
+    width: 5px;
+    height: 5px;
+    border-right-width: 1.5px;
+    border-bottom-width: 1.5px;
+    margin-top: -5px;
+  }
+
+  /* Brand Philosophy */
+  .section--brand-philosophy {
+    padding: 18px 10px;
+  }
+  .philosophy-header {
+    gap: 10px;
+    padding-bottom: 0.6rem;
+  }
+  .philosophy-header__left {
+    padding-top: 0.2rem;
+    gap: 0.4rem;
+  }
+  .philosophy-header__left > h2 {
+    font-size: 1.35rem;
+    line-height: 1.15;
+    margin-bottom: 2px;
+  }
+  .philosophy-header__right {
+    width: 54%;
+  }
+  .philosophy-header__right > p {
+    font-size: 0.46rem;
+    line-height: 1.38;
+    margin-bottom: 6px;
+  }
+  .philosophy-categories {
+    gap: 6px;
+  }
+  .category-card {
+    max-height: 105px;
+  }
+  .category-card__title {
+    font-size: 0.46rem;
+    bottom: 4%;
+    left: 6%;
+  }
+
+  /* Specialty Tea */
+  .section--specialty-tea .specific_tea,
+  .section--heritage .specific_tea {
+    height: 210px;
+    padding: 0 10px;
+  }
+  .specialty-tea__content {
+    transform: translateY(10%) !important;
+  }
+  .specialty-tea__title {
+    font-size: 1.15rem;
+    margin-bottom: 2px;
+  }
+  .specialty-tea__subtitle {
+    font-size: 0.58rem;
+  }
+  .specialty-tea__desc {
+    font-size: 0.44rem;
+    max-width: 56%;
+    line-height: 1.35;
+    margin-bottom: 4px;
+  }
+  .specific_tea .hero__btn_preiview {
+    margin-top: 0.5rem;
+    height: 1.05rem;
+  }
+
+  /* Heritage */
+  .section--heritage .specific_tea > section {
+    transform: translateY(22%);
+  }
+  .heritage__title {
+    font-size: 1.05rem;
+    margin-bottom: 3px;
+  }
+  .heritage__desc {
+    font-size: 0.45rem;
+    max-width: 175px;
+    line-height: 1.35;
+    padding-top: 0.15rem;
+    margin-bottom: 0;
+  }
+  .section--heritage .hero__btn_preiview {
+    left: calc(100% - 75px);
+    top: 14px;
+    height: 1.05rem;
+  }
+
+  /* Product Comparison (Ferment) */
+  .ferment {
+    min-height: 260px;
+  }
+  .ferment__panel {
+    grid-template-rows: 155px 46px 1fr;
+  }
+  .ferment__content,
+  .ferment__panel--dark .ferment__content {
+    padding: 12px 8px 0 10px;
+  }
+  .ferment__title {
+    font-size: 0.58rem;
+    margin-bottom: 2px;
+  }
+  .ferment__desc {
+    font-size: 0.42rem;
+    line-height: 1.32;
+  }
+  .ferment__panel--light .ferment__desc {
+    margin-bottom: 5px;
+  }
+  .ferment__btn {
+    padding: 3px 7px;
+    gap: 5px;
+    font-size: 0.35rem;
+  }
+  .ferment__btn-arrow {
+    font-size: 0.45rem;
+  }
+  .ferment__thumbs {
+    gap: 5px;
+    padding: 0 6px;
+  }
+  .ferment__panel--light .ferment__thumbs {
+    padding-right: 48px;
+  }
+  .ferment__panel--dark .ferment__thumbs {
+    padding-left: 48px;
+  }
+  .ferment__thumbs li {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+  }
+  .ferment__cup {
+    --cup-size: 92px;
+    --cup-ring: 4px;
+    top: 108px;
+  }
+
+  /* Youth */
+  .section--youth .youth {
+    height: 240px;
+  }
+  .section--youth .youth section {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  .youth__content {
+    transform: translateX(12px) translateY(10%);
+    max-width: calc(100% - 24px);
+  }
+  .youth__title {
+    font-size: 0.72rem;
+    margin-bottom: 3px;
+  }
+  .youth__desc {
+    font-size: 0.42rem;
+    max-width: 82%;
+    line-height: 1.32;
+    margin-bottom: 6px;
+  }
+  .youth__content .hero__btn_preiview {
+    height: 1.05rem;
+  }
+
+  /* Concept Research */
+  .section--concept_research {
+    padding: 0.8rem 10px 2rem;
+  }
+  .research__wrapper {
+    gap: 0.5rem;
+  }
+  .research__media {
+    flex: 0 0 34%;
+    max-width: 34%;
+  }
+  .research__text > p {
+    font-size: 0.42rem;
+    line-height: 1.32;
+  }
+  .research__content .hero__btn_preiview {
+    right: 0.4rem;
+    bottom: -1.4rem;
+    padding: 0.1rem 0.5rem;
+    height: 1rem;
+  }
+
+  /* Resort Banner */
+  .section--resort .resort__media {
+    height: 280px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  .resort__media__container {
+    gap: 8px;
+  }
+  .resort_banner {
+    padding: 0 10px;
+  }
+  .resort__tagline {
+    font-size: 0.38rem;
+    margin-bottom: 2px;
+  }
+  .resort__title {
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+  }
+  .resort__desc {
+    font-size: 0.4rem;
+    line-height: 1.32;
+  }
+  .resort_banner--right .resort__desc {
+    max-width: 60%;
+  }
+  .resort_banner--left .resort__desc {
+    max-width: 68%;
+  }
+  .resort__action {
+    bottom: 6px;
+  }
+  .resort__action--left {
+    left: 10px;
+  }
+  .resort__action--right {
+    right: 10px;
+  }
+  .btn--pill {
+    padding: 0 0.5rem;
+    gap: 4px;
+    font-size: 0.38rem;
+    height: 1.1rem;
+  }
+
+  /* Parallax Banner */
+  .section--parallax_banner {
+    padding: 0.6rem 6px;
+  }
+  .news__grid {
+    gap: 6px;
+  }
+  .news-card {
+    max-height: 130px;
+  }
+  .news-card__footer {
+    font-size: 0.45rem;
+    bottom: 4%;
+    left: 5%;
+  }
+  .news-card__title {
+    font-size: 0.45rem;
+  }
+  .news-card__arrow {
+    font-size: 0.9rem;
+    right: 0.5rem;
+  }
+
+  /* Gallery */
+  .gallery__item {
+    border-width: 0.15rem;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 0 0 20px;
+  }
+  .footer > section > .grid--2 {
+    gap: 0;
+  }
+  .footer__col--info {
+    padding: 10px 8px;
+  }
+  .footer__brand {
+    gap: 5px;
+    margin-bottom: 10px;
+  }
+  .footer__logo {
+    width: 34px;
+  }
+  .footer__brand-name {
+    font-size: 0.48rem;
+  }
+  .footer__brand-name small {
+    font-size: 0.45rem;
+    margin-top: 2px;
+  }
+  .footer__company-name {
+    margin: 0 0 6px;
+    font-size: 0.46rem;
+  }
+  .footer__info-list {
+    padding: 0 4px 0 12px;
+    font-size: 0.38rem;
+    line-height: 1.35;
+  }
+  .footer__info-list li + li {
+    margin-top: 5px;
+  }
+  .footer__policies-wrap {
+    padding: 10px 6px 8px 8px;
+    gap: 6px;
+  }
+  .footer__section-title {
+    margin: 0 0 5px;
+    font-size: 0.46rem;
+  }
+  .footer__policy-list {
+    padding-left: 10px;
+    font-size: 0.34rem;
+    line-height: 1.4;
+  }
+  .footer__badge {
+    width: 48px;
+  }
+  .footer__newsletter {
+    padding: 8px 8px 10px;
+  }
+  .footer__newsletter-title {
+    margin: 0 0 4px 6px;
+    font-size: 0.38rem;
+    letter-spacing: 0.12em;
+  }
+  .footer__form {
+    height: 22px;
+    padding: 0 2px 0 6px;
+    border-width: 1px;
+  }
+  .footer__form input {
+    font-size: 0.35rem;
+    letter-spacing: 0.1em;
+  }
+  .footer__form button {
+    width: 17px;
+    height: 17px;
+    font-size: 7px;
+  }
+  .footer__socials {
+    height: 28px;
+    gap: 6px;
+    padding: 0 6px;
+  }
+  .footer__social-label {
+    font-size: 0.38rem;
+  }
+  .footer__social-icons {
+    font-size: 11px;
+    gap: 6px;
+  }
 }
